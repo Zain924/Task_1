@@ -4,88 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Data</title>
-    <!-- Include CSS frameworks/libraries for styling -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
-    <!-- Include custom CSS for additional styling -->
-    <style>
-        /* Add custom CSS styles here */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-        }
-
-        .container {
-            margin-top: 50px;
-        }
-
-        h1 {
-            color: #343a40;
-            text-align: center;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: #fff;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #dee2e6;
-        }
-
-        th {
-            background-color: #343a40;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            margin-bottom: 20px;
-            box-sizing: border-box;
-        }
-
-        .pagination-button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-right: 5px;
-        }
-
-        .pagination-button:hover {
-            background-color: #0056b3;
-        }
-
-        /* New styles for table entries */
-        tbody tr {
-            margin-bottom: 10px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        tbody tr:hover {
-            background-color: rgba(0, 0, 0, 0.05);
-        }
-
-        td {
-            padding: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"> -->
 </head>
 <body>
+    <div class="sidebar">
+        <header class="header">
+          <h7 class="dash_head">Dashboard</h7>
+          <ul class="dash_bar">
+            <li><a href="">Employees</a></li>
+            <li><a href="">Settings</a></li>
+          </ul>
+        </header>
+      </div>
     <div class="container">
         <h1>Employee Data</h1>
         <input type="text" id="searchInput" placeholder="Search...">
@@ -113,7 +44,7 @@
         $(document).ready(function() {
             let employeeData = []; // Array to store employee data
             let currentPage = 1; // Current page
-            const recordsPerPage = 6; // Number of records per page
+            const recordsPerPage = 8; // Number of records per page
             let currentSortColumn = ''; // Current sort column
             let isAscending = true; // Flag to track sort order
 
